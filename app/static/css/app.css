@@ -5,3 +5,28 @@ body {
 footer  {
     padding-top: 20px;
 }
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
+#newsBox {
+    border-top: #54B756 solid 10px;
+    border-bottom: #C9D0D2 solid;
+    border-left: #C9D0D2 solid;
+    border-right: #C9D0D2 solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px;
+    height: 420px;
+    width: 320px;
+    flex: none;
+}
+
+#newsMainGrid {
+    display: flex;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    flex-flow: space-between;
+}
