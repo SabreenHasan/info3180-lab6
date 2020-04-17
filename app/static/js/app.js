@@ -5,7 +5,7 @@ Vue.component('news-list', {
             <h2>News</h2>
             <ul class="news__list">
                 <li v-for="article in articles"
-                class="news__item">{{ article.title }}</li>
+                class="news__item">{{ article.title }}<img :src=article.urlToImage></img>{{ article.description }}</li>
             </ul>
         </div>
     `,
