@@ -10,8 +10,21 @@ Vue.component('news-list', {
             </ul>
         </div>
     `,
+    created: function() {
+        let self = this;
+        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bab19b3a191745beb8bb25a358d44607')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                console.log(data);
+                self.articles = data.articles;
+            });
+    },
     data: function() {
-      return {};
+      return {
+          articles: []
+      };
     }
 });
 
